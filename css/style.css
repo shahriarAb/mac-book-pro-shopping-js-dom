@@ -1,0 +1,16 @@
+.grid-gap{
+    --bs-gutter-x: 3.5rem; /* this is use for place a sufficient gap between two columns */
+}
+.font-style{
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+#promo-input{
+    width: 40%;
+}
+.hr-rules{
+    margin-bottom: 10px;
+    margin-top: 0;
+    width: 60%;
+}
