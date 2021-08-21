@@ -30,23 +30,23 @@
                 <div class="mt-5">
                     <p class="font-style">Memory</p>
                     <div class="d-flex">
-                        <button type="button" class="btn btn-outline-dark me-1">8GB unified memory</button>
-                        <button type="button" class="btn btn-outline-dark">16Gb unified memory</button>
+                        <button type="button" id="no-extra-memory" class="btn btn-outline-dark me-1 total">8GB unified memory</button>
+                        <button type="button" id="extra-memory" class="btn btn-outline-dark total">16Gb unified memory</button>
                     </div>
                 </div>
                 <div class="mt-5">
                     <p class="font-style">Storage</p>
                     <div class="d-flex">
-                        <button type="button" class="btn btn-outline-dark me-1">256GB SSD storage</button>
-                        <button type="button" class="btn btn-outline-dark me-1">512GB SSD storage</button>
-                        <button type="button" class="btn btn-outline-dark">1TB SSD storage</button>
+                        <button type="button" id="first-ssd" class="btn btn-outline-dark me-1 total">256GB SSD storage</button>
+                        <button type="button" id="second-extra-ssd" class="btn btn-outline-dark me-1 total">512GB SSD storage</button>
+                        <button type="button" id="third-extra-ssd" class="btn btn-outline-dark total">1TB SSD storage</button>
                     </div>
                 </div>
                 <div class="mt-5">
                     <p class="font-style">Choose your delivery option</p>
                     <div class="d-flex">
-                        <button type="button" class="btn btn-outline-dark me-1">Fri, Aug 27 FREE Prime Delivery</button>
-                        <button type="button" class="btn btn-outline-dark">Sat, Aug 21 Delivery Charge $20</button>
+                        <button type="button" id="free-delivery" class="btn btn-outline-dark me-1 total">Fri, Aug 27 FREE Prime Delivery</button>
+                        <button type="button" id="urgent-delivery" class="btn btn-outline-dark total">Sat, Aug 21 Delivery Charge $20</button>
                     </div>
                 </div>
                 <div class="mt-5 font-style ps-2">
@@ -55,7 +55,7 @@
                             <p>Best Price</p>
                         </div>
                         <div class="col-2">
-                            <p>$1299</p>
+                            <p>$<span id="best-price">1299</span></p>
                         </div>
                     </div>
                     <div class="row  hr-rule">
@@ -63,7 +63,7 @@
                             <p>Extra Memory Cost</p>
                         </div>
                         <div class="col-2">
-                            <p>$0</p>
+                            <p>$<span id="extra-memory-cost">0</span></p>
                         </div>
                     </div>
                     <div class="row  hr-rule">
@@ -71,7 +71,7 @@
                             <p>Extra Storage Cost</p>
                         </div>
                         <div class="col-2">
-                            <p>$0</p>
+                            <p>$<span id="extra-storage-cost">0</span></p>
                         </div>
                     </div>
                     <div class="row  total-hr-rule">
@@ -79,7 +79,7 @@
                             <p>Delivery Charge</p>
                         </div>
                         <div class="col-2">
-                            <p>$0</p>
+                            <p>$<span id="shipping-cost">0</span></p>
                         </div>
                     </div>
                     <div class="row  hr-rule">
@@ -87,19 +87,20 @@
                             <p>Total Price</p>
                         </div>
                         <div class="col-2">
-                            <p>$1299</p>
+                            <p>$<span id="total-price">1299</span></p>
                         </div>
                     </div>
                 </div>
                 <h6>Add Promo Code</h6>
                 <div class="d-flex">
                     <input type="text" id="promo-input" class="form-control me-1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"> 
-                    <button type="button" class="btn btn-danger">Apply</button>
+                    <button id="promo-button" type="button" class="btn btn-danger">Apply</button>
                 </div>
+                <p id="wrong-promo-code" class="text-danger"></p>
             </div>
         </div>
         <hr>
-        <h1 class="text-center">Total: $1299</h1>
+        <h1 class="text-center">Total: $<span id="grand-total">1299</span></h1>
     </section>
     </main>
 
