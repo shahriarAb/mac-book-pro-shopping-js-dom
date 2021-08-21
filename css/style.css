@@ -6,7 +6,7 @@
     font-weight: 700;
     margin-bottom: 5px;
 }
-.hr-rule:after{
+.hr-rule:after{ /* thinner horizontal rule */
     content: "";
     display: block;
     background-color: rgb(199, 199, 199);
@@ -22,7 +22,7 @@
     width: 57%;
     margin-top: -8px;
 }
-#promo-input{
+#promo-input{ /* promo input box size */
     width: 40%;
 }
 
