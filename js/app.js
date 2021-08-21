@@ -1,3 +1,4 @@
+//click button to set function
 function extraElements(isExtra, textField, cost) {
     const extraCost = document.getElementById(textField + '-cost');
     if (isExtra == 0) {
@@ -10,6 +11,7 @@ function extraElements(isExtra, textField, cost) {
         extraCost.innerText = cost;
     }
 }
+//total amount calculation function
 function totalAmount() {
     const bestPrice = document.getElementById('best-price');
     const extraMemoryCost = document.getElementById('extra-memory-cost');
@@ -19,7 +21,15 @@ function totalAmount() {
     document.getElementById('total-price').innerText = totalPrice;
     document.getElementById('grand-total').innerText = totalPrice;
 }
-
+//calculate discount amount
+function discountCalculation(){
+    const grandTotal = document.getElementById('grand-total');
+    const grandTotalAfterDiscount = parseInt(grandTotal.innerText) - parseInt(grandTotal.innerText) * 0.2;
+    grandTotal.innerText = grandTotalAfterDiscount;
+    document.getElementById('promo-input').value = '';
+    document.getElementById('promo-button').disabled = true; //promo code should use on once.
+    document.getElementById('wrong-promo-code').innerText = ''; //if earlier attempt(s) is wrong then enter correct code to remove this text. 
+}
 //extra memory buttons
 document.getElementById('no-extra-memory').addEventListener('click', function () {
     extraElements(0, 'extra-memory', 0);
@@ -51,3 +61,13 @@ for (const button of buttons) {
         totalAmount();
     });
 }
+//promo code verify
+document.getElementById('promo-button').addEventListener('click', function(){
+    const promoInput = document.getElementById('promo-input');
+    if(promoInput.value == 'stevekaku'){
+        discountCalculation();
+    }
+    else{
+        document.getElementById('wrong-promo-code').innerText = '! Invalid Promo Code';
+    }
+});

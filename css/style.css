@@ -14,7 +14,7 @@
     width: 55%;
     margin-top: -8px;
 }
-.total-hr-rule:after{
+.total-hr-rule:after{ /* bolder horizontal rule */
     content: "";
     display: block;
     background-color: rgb(0, 0, 0);
